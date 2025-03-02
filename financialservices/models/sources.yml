@@ -4,8 +4,8 @@ sources:
   - name: finance
     schema: raw
     tables:
-      - name: fx_rates_timeseries
-        identifier: raw_fx_rates
+      - name: raw_fx_rates
+        identifier: fx_rates_timeseries
       
-      - name: stock_price
-        identifier: raw_stock_price
+      - name: raw_stock_price
+        identifier:  stock_price_timeseries
