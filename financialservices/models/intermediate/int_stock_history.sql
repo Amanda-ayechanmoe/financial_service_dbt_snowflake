@@ -1,6 +1,6 @@
 with stock_history as (
     select * from {{ref("stg_stock_price")}}
-        where indicator_name in ('nasdaq_volume','all-day_high','post-market_close','all-day_low','pre-market_open')
+       -- where indicator_name in ('nasdaq_volume','all_day_high','post_market_close','all_day_low','pre_market_open')
 ),
 
 pivoted as (
