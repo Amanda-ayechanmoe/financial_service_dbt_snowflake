@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: finance
+    schema: raw
+    tables:
+      - name: fx_rates_timeseries
+        identifier: raw_fx_rates
+      
+      - name: stock_price
+        identifier: raw_stock_price
