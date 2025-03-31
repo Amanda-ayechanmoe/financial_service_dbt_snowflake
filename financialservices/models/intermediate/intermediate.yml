@@ -1,0 +1,25 @@
+version: 2
+ 
+models:
+  - name: int_fx_rates
+    description: "An intermediate model that filters stg_knoema_fx_rates"
+    columns:
+      - name: currency||exchange_date
+        tests:
+          - unique
+          - not_null
+ 
+  - name: int_unioned_book
+    description: "An intermediate model unions the manual_book csvs"
+    columns:
+      - name: instrument
+        tests:
+          - not_null
+ 
+  - name: int_stock_history
+    description: "An intermediate model that pivots the stg_knoema_stock_history model by indicator"
+    columns:
+      - name: stock_date
+        tests:
+          - not_null
+          - unique
